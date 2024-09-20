@@ -1,0 +1,124 @@
+﻿<ResourceDictionary
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:units="using:Leagueoflegends.Support.UI.Units"
+  xmlns:views="using:Leagueoflegends.Home.UI.Views">
+
+    <ImageSource x:Key="HeadlineDefaultImageSource">ms-appx:///Leagueoflegends.Support/Images/wallpaper-caitlyn.jpg</ImageSource>
+    <ImageSource x:Key="ATypeImageSource">ms-appx:///Leagueoflegends.Support/Images/wallpaper-maokai.jpg</ImageSource>
+    <ImageSource x:Key="BTypeImageSource">ms-appx:///Leagueoflegends.Support/Images/wallpaper-leesin.png</ImageSource>
+    <ImageSource x:Key="CTypeImageSource">ms-appx:///Leagueoflegends.Support/Images/wallpaper-ezreal.jpg</ImageSource>
+    <ImageSource x:Key="DTypeImageSource">ms-appx:///Leagueoflegends.Support/Images/wallpaper-thumb-1.png</ImageSource>
+    <ImageSource x:Key="ETypeImageSource">ms-appx:///Leagueoflegends.Support/Images/wallpaper-thumb-2.png</ImageSource>
+
+    <Style x:Key="RiotButtonStyle" TargetType="units:RiotButton">
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Padding" Value="18,0"/>
+    </Style>
+
+    <Style x:Key="RiotHeadlineNewsButtonStyle" TargetType="units:RiotNewsButton">
+        <Setter Property="Width" Value="600"/>
+        <Setter Property="Margin" Value="0 20 0 0"/>
+    </Style>
+
+    <Style x:Key="RiotNewsButtonStyle" TargetType="units:RiotNewsButton">
+        <Setter Property="ImageHeight" Value="120"/>
+        <Setter Property="Margin" Value="0 0 10 0"/>
+    </Style>
+
+    <Style TargetType="views:OverviewContent">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="views:OverviewContent">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Grid.Row="0" Grid.Column="0" Margin="30,100,0,0">
+                            <TextBlock Foreground="#A09B8C"
+                                       FontSize="12.5"
+                                       Text="JUNE 21 - JULY 12"
+                                       FontWeight="Bold"
+                                       Margin="0,0,0,10"/>
+
+                            <TextBlock Foreground="#F0E6D2"
+                                       FontSize="40"
+                                       Text="PRIME GAMING -&#x0a;LOL"
+                                       FontWeight="Bold"/>
+
+                            <TextBlock Foreground="#FFA09B8C"
+                                       FontSize="14"
+                                       TextWrapping="WrapWholeWords"
+                                       Text="Second of 3 skin shards for this month now&#x0a;available with Prime Gaming."
+                                       Margin="0,12,0,12"/>
+
+                            <units:RiotButton Style="{StaticResource RiotButtonStyle}"
+                                              Width="130"
+                                              Height="32"
+                                              HorizontalAlignment="Left"
+                                              Content="CLAIM NOW"
+                                              Margin="0,6,0,0"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Row="0" Grid.Column="1" Margin="0,10,30,0">
+                            <units:RiotButton Style="{StaticResource RiotButtonStyle}"
+                                              Content="Free Champion Rotation"
+                                              HorizontalAlignment="Right"
+                                              Width="200"
+                                              BorderThickness="1"
+                                              Margin="0,6,0,0"/>
+
+                            <units:RiotNewsButton Style="{StaticResource RiotHeadlineNewsButtonStyle}"
+                                    ImageSource="{StaticResource HeadlineDefaultImageSource}"/>
+                        </StackPanel>
+
+                        <Grid Grid.Row="2" Grid.ColumnSpan="2" Margin="30,0,30,20">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="115"/>
+                                <ColumnDefinition Width="115"/>
+                            </Grid.ColumnDefinitions>
+
+                            <units:RiotNewsButton Grid.Column="0"
+                                                  Style="{StaticResource RiotNewsButtonStyle}"
+                                                  Text="▶ K/DA x 1MILLION - I'LL SHOW YOU ↗"
+                                                  ImageSource="{StaticResource ATypeImageSource}"/>
+
+                            <units:RiotNewsButton Grid.Column="1"
+                                                  Style="{StaticResource RiotNewsButtonStyle}"
+                                                  Text="2024 Preseason Update ↗"
+                                                  ImageSource="{StaticResource BTypeImageSource}"/>
+
+                            <units:RiotNewsButton Grid.Column="2"
+                                                  Style="{StaticResource RiotNewsButtonStyle}"
+                                                  Text="[Riot Store] Check out the new Jhin UNLOCKED Statue and more! ↗"
+                                                  ImageSource="{StaticResource CTypeImageSource}"/>
+
+                            <units:RiotNewsButton Grid.Column="3"
+                                                  Style="{StaticResource RiotNewsButtonStyle}"
+                                                  Text="Cosmic Sting Skarner: New Skin Spotlight"
+                                                  ImageSource="{StaticResource DTypeImageSource}"/>
+
+                            <units:RiotNewsButton Grid.Column="4"
+                                                  Style="{StaticResource RiotNewsButtonStyle}"
+                                                  Text="Dark Cosmic Lissandra: Ability Preview"
+                                                  ImageSource="{StaticResource ETypeImageSource}"
+                                                  Margin="0, 0, 0, 0"/>
+                        </Grid>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

@@ -1,0 +1,48 @@
+- name: Charles Pzold
+  seq: 1
+  status: In Game
+  category: GENERAL
+- name: Faker
+  seq: 2
+  status: In Game
+  category: GENERAL
+- name: Jamesnet
+  seq: 3
+  status: In Game
+  category: GENERAL
+- name: Vickyqu
+  seq: 4
+  status: Champ Select
+  category: GENERAL
+- name: Michael Jordan
+  seq: 5
+  status: Champ Select
+  category: GENERAL
+- name: LeBron James
+  seq: 6
+  status: Champ Select
+  category: GENERAL
+- name: Lionel Messi
+  seq: 7
+  status: League+
+  category: GENERAL
+- name: Lukewire
+  seq: 8
+  status: League+
+  category: GENERAL
+- name: James Harden
+  seq: 9
+  status: League+
+  category: GENERAL
+- name: Matthew
+  seq: 10
+  status: League+
+  category: GENERAL
+- name: Jeff Bezos
+  seq: 11
+  status: League+
+  category: GENERAL
+- name: Elon Musk
+  seq: 12
+  status: Offline
+  category: OFFLINE

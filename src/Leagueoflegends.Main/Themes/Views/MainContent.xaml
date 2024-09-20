@@ -1,0 +1,176 @@
+﻿<ResourceDictionary
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:james="using:Jamesnet.WinUI3"
+  xmlns:units="using:Leagueoflegends.Support.UI.Units"
+  xmlns:views="using:Leagueoflegends.Main.UI.Views">
+
+    <Style x:Key="MainGridStyle" TargetType="Grid">
+        <Setter Property="Width" Value="1280"/>
+        <Setter Property="Height" Value="720"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+
+    <Style x:Key="TopBorderStyle" TargetType="Border">
+        <Setter Property="Background" Value="#785A28"/>
+        <Setter Property="Height" Value="2"/>
+    </Style>
+
+    <Style x:Key="RiotPlayButtonStyle" TargetType="units:RiotPlayButton">
+        <Setter Property="Content" Value="Play"/>
+        <Setter Property="Margin" Value="25 20 20 20"/>
+    </Style>
+
+    <Style x:Key="MainMenuStackPanelStyle" TargetType="StackPanel">
+        <Setter Property="Orientation" Value="Horizontal"/>
+        <Setter Property="Grid.Column" Value="2"/>
+    </Style>
+
+    <Style x:Key="IconMenuStackPanelStyle" TargetType="StackPanel">
+        <Setter Property="Orientation" Value="Horizontal"/>
+        <Setter Property="Grid.Column" Value="4"/>
+    </Style>
+
+    <Style x:Key="StatusIndicatorStackPanelStyle" TargetType="StackPanel">
+        <Setter Property="Grid.Column" Value="6"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="10 0 0 0"/>
+    </Style>
+
+    <Style x:Key="UserGridStyle" TargetType="Grid">
+        <Setter Property="Grid.Column" Value="7"/>
+        <Setter Property="Background" Value="#010A13"/>
+        <Setter Property="Margin" Value="20 0 0 0"/>
+        <Setter Property="Width" Value="220"/>
+    </Style>
+
+    <Style x:Key="RiotUserAvatarStyle" TargetType="units:RiotUserAvatar">
+        <Setter Property="Margin" Value="10 0 0 0"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+    </Style>
+
+    <Style x:Key="RiotUserDisplayStatusStyle" TargetType="units:RiotUserDisplayStatus">
+        <Setter Property="Grid.Column" Value="1"/>
+        <Setter Property="Margin" Value="10 10 0 0"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+
+    <Style x:Key="WindowControlButtonStackPanelStyle" TargetType="StackPanel">
+        <Setter Property="Grid.Column" Value="1"/>
+        <Setter Property="Orientation" Value="Horizontal"/>
+        <Setter Property="HorizontalAlignment" Value="Right"/>
+        <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="Margin" Value="40 2 5 10"/>
+    </Style>
+
+    <Style x:Key="WindowControlButtonStyle" TargetType="units:RiotWindowControlButton">
+        <Setter Property="Margin" Value="10 5 5 5"/>
+    </Style>
+
+    <Style x:Key="RiotIconButtonStyle" TargetType="units:RiotIconButton">
+        <Setter Property="Grid.Column" Value="1"/>
+        <Setter Property="Margin" Value="10 10 8 10"/>
+        <Setter Property="HorizontalAlignment" Value="Right"/>
+        <Setter Property="VerticalAlignment" Value="Bottom"/>
+    </Style>
+
+    <Style x:Key="SeparatorBorderStyle" TargetType="Border">
+        <Setter Property="Grid.Row" Value="2"/>
+        <Setter Property="Background" Value="#553D4143"/>
+    </Style>
+
+    <Style x:Key="ContentLayerStyle" TargetType="james:WinUI3Layer">
+        <Setter Property="Grid.Column" Value="0"/>
+        <Setter Property="Margin" Value="0 0 0 0"/>
+    </Style>
+
+    <Style x:Key="SubMenuLayerStyle" TargetType="james:WinUI3Layer">
+        <Setter Property="Grid.Column" Value="0"/>
+        <Setter Property="Margin" Value="20 0 0 0"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+    </Style>
+
+    <Style x:Key="SocialLayerStyle" TargetType="james:WinUI3Layer">
+        <Setter Property="Grid.Column" Value="1"/>
+    </Style>
+
+    <Style TargetType="views:MainContent">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="views:MainContent">
+                    <Grid Style="{StaticResource MainGridStyle}">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="2"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="1"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <units:RiotWallpaper Grid.RowSpan="4" MenuName="{Binding CurrentMenu}"/>
+                        <Border Style="{StaticResource TopBorderStyle}"/>
+                        <Grid Grid.Row="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <units:RiotPlayButton Style="{StaticResource RiotPlayButtonStyle}"/>
+                            <units:RiotNoticeButton Grid.Column="1"/>
+                            <StackPanel Style="{StaticResource MainMenuStackPanelStyle}">
+                                <units:RiotMainMenu Command="{Binding MenuCommand}" GroupName="MainMenu" CommandParameter="HOME" MenuName="HOME" IsChecked="True"/>
+                                <units:RiotMainMenu Command="{Binding MenuCommand}" GroupName="MainMenu" CommandParameter="TFT" MenuName="TFT"/>
+                                <units:RiotMainMenu Command="{Binding MenuCommand}" GroupName="MainMenu" CommandParameter="CLASH" MenuName="CLASH"/>
+                            </StackPanel>
+                            <StackPanel Style="{StaticResource IconMenuStackPanelStyle}">
+                                <units:RiotMainIconMenu Command="{Binding MenuCommand}" GroupName="MainMenu" CommandParameter="PROFILE" MenuIcon="Profile"/>
+                                <units:RiotMainIconMenu Command="{Binding MenuCommand}" GroupName="MainMenu" CommandParameter="COLLECTION" MenuIcon="Collection"/>
+                                <units:RiotMainIconMenu Command="{Binding MenuCommand}" GroupName="MainMenu" CommandParameter="SHOP" MenuIcon="Shop"/>
+                                <units:RiotMainIconMenu Command="{Binding MenuCommand}" GroupName="MainMenu" CommandParameter="STORE" MenuIcon="Store"/>
+                            </StackPanel>
+                            <units:VerticalMainMenuSeparator Grid.Column="5"/>
+                            <StackPanel Style="{StaticResource StatusIndicatorStackPanelStyle}">
+                                <units:RiotStatusIndicator IconType="RP" Value="104"/>
+                                <units:RiotStatusIndicator IconType="BlueEssence" Value="271"/>
+                            </StackPanel>
+                            <Grid Style="{StaticResource UserGridStyle}">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <units:RiotUserAvatar Style="{StaticResource RiotUserAvatarStyle}"/>
+                                <units:RiotUserDisplayStatus Style="{StaticResource RiotUserDisplayStatusStyle}"
+                                                             UserName="Hide on bush"
+                                                             IsOnline="True"/>
+                                <StackPanel Style="{StaticResource WindowControlButtonStackPanelStyle}">
+                                    <units:RiotWindowControlButton Style="{StaticResource WindowControlButtonStyle}" IconType="Help"/>
+                                    <units:RiotWindowControlButton Style="{StaticResource WindowControlButtonStyle}" IconType="Minimize"/>
+                                    <units:RiotWindowControlButton Style="{StaticResource WindowControlButtonStyle}" IconType="Settings" Command="{Binding SettingsCommand}"/>
+                                    <units:RiotWindowControlButton Style="{StaticResource WindowControlButtonStyle}" IconType="Close"/>
+                                </StackPanel>
+                                <units:RiotIconButton Style="{StaticResource RiotIconButtonStyle}" IconType="Alarm"/>
+                            </Grid>
+                        </Grid>
+                        <Border Style="{StaticResource SeparatorBorderStyle}"/>
+                        <Grid Grid.Row="3">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <james:WinUI3Layer Style="{StaticResource ContentLayerStyle}" LayerName="ContentLayer"/>
+                            <james:WinUI3Layer Style="{StaticResource SubMenuLayerStyle}" LayerName="SubMenuLayer"/>
+                            <james:WinUI3Layer Style="{StaticResource SocialLayerStyle}" LayerName="SocialLayer"/>
+                        </Grid>
+                        <james:WinUI3Layer Grid.RowSpan="4" LayerName="OverlayLayer"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

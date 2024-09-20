@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Leagueoflegends (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "Leagueoflegends (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

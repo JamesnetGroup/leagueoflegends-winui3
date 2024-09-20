@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
+    <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+    <RootNamespace>Leagueoflegends.Support</RootNamespace>
+    <RuntimeIdentifiers Condition="$([MSBuild]::GetTargetFrameworkVersion('$(TargetFramework)')) &gt;= 8">win-x86;win-x64;win-arm64</RuntimeIdentifiers>
+    <RuntimeIdentifiers Condition="$([MSBuild]::GetTargetFrameworkVersion('$(TargetFramework)')) &lt; 8">win10-x86;win10-x64;win10-arm64</RuntimeIdentifiers>
+    <UseWinUI>true</UseWinUI>
+    <WindowsSdkPackageVersion>10.0.19041.38</WindowsSdkPackageVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Datas\Friends.yml" />
+    <None Remove="Datas\MatchHistories.yml" />
+    <None Remove="Datas\Menus.yml" />
+    <None Remove="Datas\Options.yml" />
+    <None Remove="Datas\PersonalChampStats.yml" />
+    <None Remove="Datas\PlayChamps.yml" />
+    <None Remove="Datas\Recents.yml" />
+    <None Remove="Datas\Schedules.yml" />
+    <None Remove="Datas\Skins.yml" />
+    <None Remove="Datas\Spells.yml" />
+    <None Remove="Datas\StoreChamps.yml" />
+    <None Remove="Datas\TeamFights.yml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Datas\Friends.yml" />
+    <EmbeddedResource Include="Datas\MatchHistories.yml" />
+    <EmbeddedResource Include="Datas\Menus.yml" />
+    <EmbeddedResource Include="Datas\Options.yml" />
+    <EmbeddedResource Include="Datas\PersonalChampStats.yml" />
+    <EmbeddedResource Include="Datas\PlayChamps.yml" />
+    <EmbeddedResource Include="Datas\Recents.yml" />
+    <EmbeddedResource Include="Datas\Schedules.yml" />
+    <EmbeddedResource Include="Datas\Skins.yml" />
+    <EmbeddedResource Include="Datas\Spells.yml" />
+    <EmbeddedResource Include="Datas\StoreChamps.yml" />
+    <EmbeddedResource Include="Datas\TeamFights.yml" />
+  </ItemGroup>
+
+  <ItemGroup>
+      <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.5.240311000" />
+      <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.22621.756" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Jamesnet.WinUI3\Jamesnet.WinUI3.csproj" />
+  </ItemGroup>
+</Project>

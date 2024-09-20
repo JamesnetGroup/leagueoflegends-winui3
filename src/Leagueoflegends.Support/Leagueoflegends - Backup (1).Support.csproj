@@ -1,0 +1,1071 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
+    <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+    <RootNamespace>Leagueoflegends.Support</RootNamespace>
+    <RuntimeIdentifiers Condition="$([MSBuild]::GetTargetFrameworkVersion('$(TargetFramework)')) &gt;= 8">win-x86;win-x64;win-arm64</RuntimeIdentifiers>
+    <RuntimeIdentifiers Condition="$([MSBuild]::GetTargetFrameworkVersion('$(TargetFramework)')) &lt; 8">win10-x86;win10-x64;win10-arm64</RuntimeIdentifiers>
+    <UseWinUI>true</UseWinUI>
+    <WindowsSdkPackageVersion>10.0.19041.38</WindowsSdkPackageVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Remove="Images\Concepts\assassin.png" />
+    <Content Remove="Images\Concepts\dealer.png" />
+    <Content Remove="Images\Concepts\support.png" />
+    <Content Remove="Images\Concepts\tanker.png" />
+    <Content Remove="Images\Concepts\warrior.png" />
+    <Content Remove="Images\Concepts\wizard.png" />
+    <Content Remove="Images\Items\berserkersgreaves.png" />
+    <Content Remove="Images\Items\cloak.png" />
+    <Content Remove="Images\Items\dominik.png" />
+    <Content Remove="Images\Items\doranring.png" />
+    <Content Remove="Images\Items\galeforce.png" />
+    <Content Remove="Images\Items\infinityedge.png" />
+    <Content Remove="Images\Items\ionianshoes.png" />
+    <Content Remove="Images\Items\mortalreminder.png" />
+    <Content Remove="Images\Items\oraclelens.png" />
+    <Content Remove="Images\Items\platedshoes.png" />
+    <Content Remove="Images\Items\potion.png" />
+    <Content Remove="Images\Items\potion2.png" />
+    <Content Remove="Images\Items\quicksilver.png" />
+    <Content Remove="Images\Items\rabadon.png" />
+    <Content Remove="Images\Items\rocketbelt.png" />
+    <Content Remove="Images\Items\shoes.png" />
+    <Content Remove="Images\Items\shurelya.png" />
+    <Content Remove="Images\Items\solari.png" />
+    <Content Remove="Images\Items\targon.png" />
+    <Content Remove="Images\Items\thecollector.png" />
+    <Content Remove="Images\Items\trinityforce.png" />
+    <Content Remove="Images\Items\voidstaff.png" />
+    <Content Remove="Images\Items\ward.png" />
+    <Content Remove="Images\Items\warmog.png" />
+    <Content Remove="Images\Items\zhonya.png" />
+    <Content Remove="Images\Portraits\portrait_aatrox.jpg" />
+    <Content Remove="Images\Portraits\portrait_ahri.jpg" />
+    <Content Remove="Images\Portraits\portrait_akali.jpg" />
+    <Content Remove="Images\Portraits\portrait_akshan.jpg" />
+    <Content Remove="Images\Portraits\portrait_alistar.jpg" />
+    <Content Remove="Images\Portraits\portrait_amumu.jpg" />
+    <Content Remove="Images\Portraits\portrait_anivia.jpg" />
+    <Content Remove="Images\Portraits\portrait_annie.jpg" />
+    <Content Remove="Images\Portraits\portrait_aphelios.jpg" />
+    <Content Remove="Images\Portraits\portrait_ashe.jpg" />
+    <Content Remove="Images\Portraits\portrait_aurelionsol.jpg" />
+    <Content Remove="Images\Portraits\portrait_azir.jpg" />
+    <Content Remove="Images\Portraits\portrait_bard.jpg" />
+    <Content Remove="Images\Portraits\portrait_blitzcrank.jpg" />
+    <Content Remove="Images\Portraits\portrait_brand.jpg" />
+    <Content Remove="Images\Portraits\portrait_braum.jpg" />
+    <Content Remove="Images\Portraits\portrait_caitlyn.jpg" />
+    <Content Remove="Images\Portraits\portrait_camille.jpg" />
+    <Content Remove="Images\Portraits\portrait_cassiopeia.jpg" />
+    <Content Remove="Images\Portraits\portrait_chogath.jpg" />
+    <Content Remove="Images\Portraits\portrait_corki.jpg" />
+    <Content Remove="Images\Portraits\portrait_darius.jpg" />
+    <Content Remove="Images\Portraits\portrait_diana.jpg" />
+    <Content Remove="Images\Portraits\portrait_draven.jpg" />
+    <Content Remove="Images\Portraits\portrait_drmundo.jpg" />
+    <Content Remove="Images\Portraits\portrait_ekko.jpg" />
+    <Content Remove="Images\Portraits\portrait_elise.jpg" />
+    <Content Remove="Images\Portraits\portrait_evelynn.jpg" />
+    <Content Remove="Images\Portraits\portrait_ezreal.jpg" />
+    <Content Remove="Images\Portraits\portrait_fiddlesticks.jpg" />
+    <Content Remove="Images\Portraits\portrait_fiora.jpg" />
+    <Content Remove="Images\Portraits\portrait_fizz.jpg" />
+    <Content Remove="Images\Portraits\portrait_galio.jpg" />
+    <Content Remove="Images\Portraits\portrait_gangplank.jpg" />
+    <Content Remove="Images\Portraits\portrait_garen.jpg" />
+    <Content Remove="Images\Portraits\portrait_gnar.jpg" />
+    <Content Remove="Images\Portraits\portrait_gragas.jpg" />
+    <Content Remove="Images\Portraits\portrait_graves.jpg" />
+    <Content Remove="Images\Portraits\portrait_gwen.jpg" />
+    <Content Remove="Images\Portraits\portrait_hecarim.jpg" />
+    <Content Remove="Images\Portraits\portrait_heimerdinger.jpg" />
+    <Content Remove="Images\Portraits\portrait_illaoi.jpg" />
+    <Content Remove="Images\Portraits\portrait_insignia.png" />
+    <Content Remove="Images\Portraits\portrait_irelia.jpg" />
+    <Content Remove="Images\Portraits\portrait_ivern.jpg" />
+    <Content Remove="Images\Portraits\portrait_janna.jpg" />
+    <Content Remove="Images\Portraits\portrait_jarvaniv.jpg" />
+    <Content Remove="Images\Portraits\portrait_jax.jpg" />
+    <Content Remove="Images\Portraits\portrait_jayce.jpg" />
+    <Content Remove="Images\Portraits\portrait_jhin.jpg" />
+    <Content Remove="Images\Portraits\portrait_jinx.jpg" />
+    <Content Remove="Images\Portraits\portrait_kaisa.jpg" />
+    <Content Remove="Images\Portraits\portrait_kalista.jpg" />
+    <Content Remove="Images\Portraits\portrait_karma.jpg" />
+    <Content Remove="Images\Portraits\portrait_karthus.jpg" />
+    <Content Remove="Images\Portraits\portrait_kassadin.jpg" />
+    <Content Remove="Images\Portraits\portrait_katarina.jpg" />
+    <Content Remove="Images\Portraits\portrait_kayle.jpg" />
+    <Content Remove="Images\Portraits\portrait_kayn.jpg" />
+    <Content Remove="Images\Portraits\portrait_kennen.jpg" />
+    <Content Remove="Images\Portraits\portrait_khazix.jpg" />
+    <Content Remove="Images\Portraits\portrait_kindred.jpg" />
+    <Content Remove="Images\Portraits\portrait_kled.jpg" />
+    <Content Remove="Images\Portraits\portrait_kogmaw.jpg" />
+    <Content Remove="Images\Portraits\portrait_leblanc.jpg" />
+    <Content Remove="Images\Portraits\portrait_leesin.jpg" />
+    <Content Remove="Images\Portraits\portrait_leona.jpg" />
+    <Content Remove="Images\Portraits\portrait_lillia.jpg" />
+    <Content Remove="Images\Portraits\portrait_lissandra.jpg" />
+    <Content Remove="Images\Portraits\portrait_lucian.jpg" />
+    <Content Remove="Images\Portraits\portrait_lulu.jpg" />
+    <Content Remove="Images\Portraits\portrait_lux.jpg" />
+    <Content Remove="Images\Portraits\portrait_malphite.jpg" />
+    <Content Remove="Images\Portraits\portrait_malzahar.jpg" />
+    <Content Remove="Images\Portraits\portrait_maokai.jpg" />
+    <Content Remove="Images\Portraits\portrait_masteryi.jpg" />
+    <Content Remove="Images\Portraits\portrait_missfortune.jpg" />
+    <Content Remove="Images\Portraits\portrait_mordekaiser.jpg" />
+    <Content Remove="Images\Portraits\portrait_morgana.jpg" />
+    <Content Remove="Images\Portraits\portrait_nami.jpg" />
+    <Content Remove="Images\Portraits\portrait_nasus.jpg" />
+    <Content Remove="Images\Portraits\portrait_nautilus.jpg" />
+    <Content Remove="Images\Portraits\portrait_neeko.jpg" />
+    <Content Remove="Images\Portraits\portrait_nidalee.jpg" />
+    <Content Remove="Images\Portraits\portrait_nocturne.jpg" />
+    <Content Remove="Images\Portraits\portrait_nunuwillump.jpg" />
+    <Content Remove="Images\Portraits\portrait_olaf.jpg" />
+    <Content Remove="Images\Portraits\portrait_orianna.jpg" />
+    <Content Remove="Images\Portraits\portrait_ornn.jpg" />
+    <Content Remove="Images\Portraits\portrait_pantheon.jpg" />
+    <Content Remove="Images\Portraits\portrait_poppy.jpg" />
+    <Content Remove="Images\Portraits\portrait_pyke.jpg" />
+    <Content Remove="Images\Portraits\portrait_qiyana.jpg" />
+    <Content Remove="Images\Portraits\portrait_quinn.jpg" />
+    <Content Remove="Images\Portraits\portrait_rakan.jpg" />
+    <Content Remove="Images\Portraits\portrait_rammus.jpg" />
+    <Content Remove="Images\Portraits\portrait_reksai.jpg" />
+    <Content Remove="Images\Portraits\portrait_rell.jpg" />
+    <Content Remove="Images\Portraits\portrait_renekton.jpg" />
+    <Content Remove="Images\Portraits\portrait_rengar.jpg" />
+    <Content Remove="Images\Portraits\portrait_riven.jpg" />
+    <Content Remove="Images\Portraits\portrait_rumble.jpg" />
+    <Content Remove="Images\Portraits\portrait_ryze.jpg" />
+    <Content Remove="Images\Portraits\portrait_samira.jpg" />
+    <Content Remove="Images\Portraits\portrait_sejuani.jpg" />
+    <Content Remove="Images\Portraits\portrait_senna.jpg" />
+    <Content Remove="Images\Portraits\portrait_seraphine.jpg" />
+    <Content Remove="Images\Portraits\portrait_sett.jpg" />
+    <Content Remove="Images\Portraits\portrait_shaco.jpg" />
+    <Content Remove="Images\Portraits\portrait_shen.jpg" />
+    <Content Remove="Images\Portraits\portrait_shyvana.jpg" />
+    <Content Remove="Images\Portraits\portrait_singed.jpg" />
+    <Content Remove="Images\Portraits\portrait_sion.jpg" />
+    <Content Remove="Images\Portraits\portrait_sivir.jpg" />
+    <Content Remove="Images\Portraits\portrait_skarner.jpg" />
+    <Content Remove="Images\Portraits\portrait_sona.jpg" />
+    <Content Remove="Images\Portraits\portrait_soraka.jpg" />
+    <Content Remove="Images\Portraits\portrait_swain.jpg" />
+    <Content Remove="Images\Portraits\portrait_sylas.jpg" />
+    <Content Remove="Images\Portraits\portrait_syndra.jpg" />
+    <Content Remove="Images\Portraits\portrait_tahmkench.jpg" />
+    <Content Remove="Images\Portraits\portrait_taliyah.jpg" />
+    <Content Remove="Images\Portraits\portrait_talon.jpg" />
+    <Content Remove="Images\Portraits\portrait_taric.jpg" />
+    <Content Remove="Images\Portraits\portrait_teemo.jpg" />
+    <Content Remove="Images\Portraits\portrait_thresh.jpg" />
+    <Content Remove="Images\Portraits\portrait_tristana.jpg" />
+    <Content Remove="Images\Portraits\portrait_trundle.jpg" />
+    <Content Remove="Images\Portraits\portrait_tryndamere.jpg" />
+    <Content Remove="Images\Portraits\portrait_twistedfate.jpg" />
+    <Content Remove="Images\Portraits\portrait_twitch.jpg" />
+    <Content Remove="Images\Portraits\portrait_udyr.jpg" />
+    <Content Remove="Images\Portraits\portrait_urgot.jpg" />
+    <Content Remove="Images\Portraits\portrait_varus.jpg" />
+    <Content Remove="Images\Portraits\portrait_vayne.jpg" />
+    <Content Remove="Images\Portraits\portrait_veigar.jpg" />
+    <Content Remove="Images\Portraits\portrait_velkoz.jpg" />
+    <Content Remove="Images\Portraits\portrait_vi.jpg" />
+    <Content Remove="Images\Portraits\portrait_viego.jpg" />
+    <Content Remove="Images\Portraits\portrait_viktor.jpg" />
+    <Content Remove="Images\Portraits\portrait_vladimir.jpg" />
+    <Content Remove="Images\Portraits\portrait_volibear.jpg" />
+    <Content Remove="Images\Portraits\portrait_warwick.jpg" />
+    <Content Remove="Images\Portraits\portrait_wukong.jpg" />
+    <Content Remove="Images\Portraits\portrait_xayah.jpg" />
+    <Content Remove="Images\Portraits\portrait_xerath.jpg" />
+    <Content Remove="Images\Portraits\portrait_xinzhao.jpg" />
+    <Content Remove="Images\Portraits\portrait_yasuo.jpg" />
+    <Content Remove="Images\Portraits\portrait_yone.jpg" />
+    <Content Remove="Images\Portraits\portrait_yorick.jpg" />
+    <Content Remove="Images\Portraits\portrait_yuumi.jpg" />
+    <Content Remove="Images\Portraits\portrait_zac.jpg" />
+    <Content Remove="Images\Portraits\portrait_zed.jpg" />
+    <Content Remove="Images\Portraits\portrait_ziggs.jpg" />
+    <Content Remove="Images\Portraits\portrait_zilean.jpg" />
+    <Content Remove="Images\Portraits\portrait_zoe.jpg" />
+    <Content Remove="Images\Portraits\portrait_zyra.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Datas\Friends.yml" />
+    <None Remove="Datas\MatchHistories.yml" />
+    <None Remove="Datas\Menus.yml" />
+    <None Remove="Datas\Options.yml" />
+    <None Remove="Datas\PersonalChampStats.yml" />
+    <None Remove="Datas\PlayChamps.yml" />
+    <None Remove="Datas\Recents.yml" />
+    <None Remove="Datas\Schedules.yml" />
+    <None Remove="Datas\Skins.yml" />
+    <None Remove="Datas\Spells.yml" />
+    <None Remove="Datas\StoreChamps.yml" />
+    <None Remove="Datas\TeamFights.yml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Datas\Friends.yml" />
+    <EmbeddedResource Include="Datas\MatchHistories.yml" />
+    <EmbeddedResource Include="Datas\Menus.yml" />
+    <EmbeddedResource Include="Datas\Options.yml" />
+    <EmbeddedResource Include="Datas\PersonalChampStats.yml" />
+    <EmbeddedResource Include="Datas\PlayChamps.yml" />
+    <EmbeddedResource Include="Datas\Recents.yml" />
+    <EmbeddedResource Include="Datas\Schedules.yml" />
+    <EmbeddedResource Include="Datas\Skins.yml" />
+    <EmbeddedResource Include="Datas\Spells.yml" />
+    <EmbeddedResource Include="Datas\StoreChamps.yml" />
+    <EmbeddedResource Include="Datas\TeamFights.yml" />
+  </ItemGroup>
+
+  <ItemGroup>
+      <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.5.240311000" />
+      <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.22621.756" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Jamesnet.WinUI3\Jamesnet.WinUI3.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\Concepts\assassin.png" />
+    <Resource Include="Images\Concepts\dealer.png" />
+    <Resource Include="Images\Concepts\support.png" />
+    <Resource Include="Images\Concepts\tanker.png" />
+    <Resource Include="Images\Concepts\warrior.png" />
+    <Resource Include="Images\Concepts\wizard.png" />
+    <Resource Include="Images\Items\berserkersgreaves.png" />
+    <Resource Include="Images\Items\cloak.png" />
+    <Resource Include="Images\Items\dominik.png" />
+    <Resource Include="Images\Items\doranring.png" />
+    <Resource Include="Images\Items\galeforce.png" />
+    <Resource Include="Images\Items\infinityedge.png" />
+    <Resource Include="Images\Items\ionianshoes.png" />
+    <Resource Include="Images\Items\mortalreminder.png" />
+    <Resource Include="Images\Items\oraclelens.png" />
+    <Resource Include="Images\Items\platedshoes.png" />
+    <Resource Include="Images\Items\potion.png" />
+    <Resource Include="Images\Items\potion2.png" />
+    <Resource Include="Images\Items\quicksilver.png" />
+    <Resource Include="Images\Items\rabadon.png" />
+    <Resource Include="Images\Items\rocketbelt.png" />
+    <Resource Include="Images\Items\shoes.png" />
+    <Resource Include="Images\Items\shurelya.png" />
+    <Resource Include="Images\Items\solari.png" />
+    <Resource Include="Images\Items\targon.png" />
+    <Resource Include="Images\Items\thecollector.png" />
+    <Resource Include="Images\Items\trinityforce.png" />
+    <Resource Include="Images\Items\voidstaff.png" />
+    <Resource Include="Images\Items\ward.png" />
+    <Resource Include="Images\Items\warmog.png" />
+    <Resource Include="Images\Items\zhonya.png" />
+    <Resource Include="Images\Portraits\portrait_aatrox.jpg" />
+    <Resource Include="Images\Portraits\portrait_ahri.jpg" />
+    <Resource Include="Images\Portraits\portrait_akali.jpg" />
+    <Resource Include="Images\Portraits\portrait_akshan.jpg" />
+    <Resource Include="Images\Portraits\portrait_alistar.jpg" />
+    <Resource Include="Images\Portraits\portrait_amumu.jpg" />
+    <Resource Include="Images\Portraits\portrait_anivia.jpg" />
+    <Resource Include="Images\Portraits\portrait_annie.jpg" />
+    <Resource Include="Images\Portraits\portrait_aphelios.jpg" />
+    <Resource Include="Images\Portraits\portrait_ashe.jpg" />
+    <Resource Include="Images\Portraits\portrait_aurelionsol.jpg" />
+    <Resource Include="Images\Portraits\portrait_azir.jpg" />
+    <Resource Include="Images\Portraits\portrait_bard.jpg" />
+    <Resource Include="Images\Portraits\portrait_blitzcrank.jpg" />
+    <Resource Include="Images\Portraits\portrait_brand.jpg" />
+    <Resource Include="Images\Portraits\portrait_braum.jpg" />
+    <Resource Include="Images\Portraits\portrait_caitlyn.jpg" />
+    <Resource Include="Images\Portraits\portrait_camille.jpg" />
+    <Resource Include="Images\Portraits\portrait_cassiopeia.jpg" />
+    <Resource Include="Images\Portraits\portrait_chogath.jpg" />
+    <Resource Include="Images\Portraits\portrait_corki.jpg" />
+    <Resource Include="Images\Portraits\portrait_darius.jpg" />
+    <Resource Include="Images\Portraits\portrait_diana.jpg" />
+    <Resource Include="Images\Portraits\portrait_draven.jpg" />
+    <Resource Include="Images\Portraits\portrait_drmundo.jpg" />
+    <Resource Include="Images\Portraits\portrait_ekko.jpg" />
+    <Resource Include="Images\Portraits\portrait_elise.jpg" />
+    <Resource Include="Images\Portraits\portrait_evelynn.jpg" />
+    <Resource Include="Images\Portraits\portrait_ezreal.jpg" />
+    <Resource Include="Images\Portraits\portrait_fiddlesticks.jpg" />
+    <Resource Include="Images\Portraits\portrait_fiora.jpg" />
+    <Resource Include="Images\Portraits\portrait_fizz.jpg" />
+    <Resource Include="Images\Portraits\portrait_galio.jpg" />
+    <Resource Include="Images\Portraits\portrait_gangplank.jpg" />
+    <Resource Include="Images\Portraits\portrait_garen.jpg" />
+    <Resource Include="Images\Portraits\portrait_gnar.jpg" />
+    <Resource Include="Images\Portraits\portrait_gragas.jpg" />
+    <Resource Include="Images\Portraits\portrait_graves.jpg" />
+    <Resource Include="Images\Portraits\portrait_gwen.jpg" />
+    <Resource Include="Images\Portraits\portrait_hecarim.jpg" />
+    <Resource Include="Images\Portraits\portrait_heimerdinger.jpg" />
+    <Resource Include="Images\Portraits\portrait_illaoi.jpg" />
+    <Resource Include="Images\Portraits\portrait_insignia.png" />
+    <Resource Include="Images\Portraits\portrait_irelia.jpg" />
+    <Resource Include="Images\Portraits\portrait_ivern.jpg" />
+    <Resource Include="Images\Portraits\portrait_janna.jpg" />
+    <Resource Include="Images\Portraits\portrait_jarvaniv.jpg" />
+    <Resource Include="Images\Portraits\portrait_jax.jpg" />
+    <Resource Include="Images\Portraits\portrait_jayce.jpg" />
+    <Resource Include="Images\Portraits\portrait_jhin.jpg" />
+    <Resource Include="Images\Portraits\portrait_jinx.jpg" />
+    <Resource Include="Images\Portraits\portrait_kaisa.jpg" />
+    <Resource Include="Images\Portraits\portrait_kalista.jpg" />
+    <Resource Include="Images\Portraits\portrait_karma.jpg" />
+    <Resource Include="Images\Portraits\portrait_karthus.jpg" />
+    <Resource Include="Images\Portraits\portrait_kassadin.jpg" />
+    <Resource Include="Images\Portraits\portrait_katarina.jpg" />
+    <Resource Include="Images\Portraits\portrait_kayle.jpg" />
+    <Resource Include="Images\Portraits\portrait_kayn.jpg" />
+    <Resource Include="Images\Portraits\portrait_kennen.jpg" />
+    <Resource Include="Images\Portraits\portrait_khazix.jpg" />
+    <Resource Include="Images\Portraits\portrait_kindred.jpg" />
+    <Resource Include="Images\Portraits\portrait_kled.jpg" />
+    <Resource Include="Images\Portraits\portrait_kogmaw.jpg" />
+    <Resource Include="Images\Portraits\portrait_leblanc.jpg" />
+    <Resource Include="Images\Portraits\portrait_leesin.jpg" />
+    <Resource Include="Images\Portraits\portrait_leona.jpg" />
+    <Resource Include="Images\Portraits\portrait_lillia.jpg" />
+    <Resource Include="Images\Portraits\portrait_lissandra.jpg" />
+    <Resource Include="Images\Portraits\portrait_lucian.jpg" />
+    <Resource Include="Images\Portraits\portrait_lulu.jpg" />
+    <Resource Include="Images\Portraits\portrait_lux.jpg" />
+    <Resource Include="Images\Portraits\portrait_malphite.jpg" />
+    <Resource Include="Images\Portraits\portrait_malzahar.jpg" />
+    <Resource Include="Images\Portraits\portrait_maokai.jpg" />
+    <Resource Include="Images\Portraits\portrait_masteryi.jpg" />
+    <Resource Include="Images\Portraits\portrait_missfortune.jpg" />
+    <Resource Include="Images\Portraits\portrait_mordekaiser.jpg" />
+    <Resource Include="Images\Portraits\portrait_morgana.jpg" />
+    <Resource Include="Images\Portraits\portrait_nami.jpg" />
+    <Resource Include="Images\Portraits\portrait_nasus.jpg" />
+    <Resource Include="Images\Portraits\portrait_nautilus.jpg" />
+    <Resource Include="Images\Portraits\portrait_neeko.jpg" />
+    <Resource Include="Images\Portraits\portrait_nidalee.jpg" />
+    <Resource Include="Images\Portraits\portrait_nocturne.jpg" />
+    <Resource Include="Images\Portraits\portrait_nunuwillump.jpg" />
+    <Resource Include="Images\Portraits\portrait_olaf.jpg" />
+    <Resource Include="Images\Portraits\portrait_orianna.jpg" />
+    <Resource Include="Images\Portraits\portrait_ornn.jpg" />
+    <Resource Include="Images\Portraits\portrait_pantheon.jpg" />
+    <Resource Include="Images\Portraits\portrait_poppy.jpg" />
+    <Resource Include="Images\Portraits\portrait_pyke.jpg" />
+    <Resource Include="Images\Portraits\portrait_qiyana.jpg" />
+    <Resource Include="Images\Portraits\portrait_quinn.jpg" />
+    <Resource Include="Images\Portraits\portrait_rakan.jpg" />
+    <Resource Include="Images\Portraits\portrait_rammus.jpg" />
+    <Resource Include="Images\Portraits\portrait_reksai.jpg" />
+    <Resource Include="Images\Portraits\portrait_rell.jpg" />
+    <Resource Include="Images\Portraits\portrait_renekton.jpg" />
+    <Resource Include="Images\Portraits\portrait_rengar.jpg" />
+    <Resource Include="Images\Portraits\portrait_riven.jpg" />
+    <Resource Include="Images\Portraits\portrait_rumble.jpg" />
+    <Resource Include="Images\Portraits\portrait_ryze.jpg" />
+    <Resource Include="Images\Portraits\portrait_samira.jpg" />
+    <Resource Include="Images\Portraits\portrait_sejuani.jpg" />
+    <Resource Include="Images\Portraits\portrait_senna.jpg" />
+    <Resource Include="Images\Portraits\portrait_seraphine.jpg" />
+    <Resource Include="Images\Portraits\portrait_sett.jpg" />
+    <Resource Include="Images\Portraits\portrait_shaco.jpg" />
+    <Resource Include="Images\Portraits\portrait_shen.jpg" />
+    <Resource Include="Images\Portraits\portrait_shyvana.jpg" />
+    <Resource Include="Images\Portraits\portrait_singed.jpg" />
+    <Resource Include="Images\Portraits\portrait_sion.jpg" />
+    <Resource Include="Images\Portraits\portrait_sivir.jpg" />
+    <Resource Include="Images\Portraits\portrait_skarner.jpg" />
+    <Resource Include="Images\Portraits\portrait_sona.jpg" />
+    <Resource Include="Images\Portraits\portrait_soraka.jpg" />
+    <Resource Include="Images\Portraits\portrait_swain.jpg" />
+    <Resource Include="Images\Portraits\portrait_sylas.jpg" />
+    <Resource Include="Images\Portraits\portrait_syndra.jpg" />
+    <Resource Include="Images\Portraits\portrait_tahmkench.jpg" />
+    <Resource Include="Images\Portraits\portrait_taliyah.jpg" />
+    <Resource Include="Images\Portraits\portrait_talon.jpg" />
+    <Resource Include="Images\Portraits\portrait_taric.jpg" />
+    <Resource Include="Images\Portraits\portrait_teemo.jpg" />
+    <Resource Include="Images\Portraits\portrait_thresh.jpg" />
+    <Resource Include="Images\Portraits\portrait_tristana.jpg" />
+    <Resource Include="Images\Portraits\portrait_trundle.jpg" />
+    <Resource Include="Images\Portraits\portrait_tryndamere.jpg" />
+    <Resource Include="Images\Portraits\portrait_twistedfate.jpg" />
+    <Resource Include="Images\Portraits\portrait_twitch.jpg" />
+    <Resource Include="Images\Portraits\portrait_udyr.jpg" />
+    <Resource Include="Images\Portraits\portrait_urgot.jpg" />
+    <Resource Include="Images\Portraits\portrait_varus.jpg" />
+    <Resource Include="Images\Portraits\portrait_vayne.jpg" />
+    <Resource Include="Images\Portraits\portrait_veigar.jpg" />
+    <Resource Include="Images\Portraits\portrait_velkoz.jpg" />
+    <Resource Include="Images\Portraits\portrait_vi.jpg" />
+    <Resource Include="Images\Portraits\portrait_viego.jpg" />
+    <Resource Include="Images\Portraits\portrait_viktor.jpg" />
+    <Resource Include="Images\Portraits\portrait_vladimir.jpg" />
+    <Resource Include="Images\Portraits\portrait_volibear.jpg" />
+    <Resource Include="Images\Portraits\portrait_warwick.jpg" />
+    <Resource Include="Images\Portraits\portrait_wukong.jpg" />
+    <Resource Include="Images\Portraits\portrait_xayah.jpg" />
+    <Resource Include="Images\Portraits\portrait_xerath.jpg" />
+    <Resource Include="Images\Portraits\portrait_xinzhao.jpg" />
+    <Resource Include="Images\Portraits\portrait_yasuo.jpg" />
+    <Resource Include="Images\Portraits\portrait_yone.jpg" />
+    <Resource Include="Images\Portraits\portrait_yorick.jpg" />
+    <Resource Include="Images\Portraits\portrait_yuumi.jpg" />
+    <Resource Include="Images\Portraits\portrait_zac.jpg" />
+    <Resource Include="Images\Portraits\portrait_zed.jpg" />
+    <Resource Include="Images\Portraits\portrait_ziggs.jpg" />
+    <Resource Include="Images\Portraits\portrait_zilean.jpg" />
+    <Resource Include="Images\Portraits\portrait_zoe.jpg" />
+    <Resource Include="Images\Portraits\portrait_zyra.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Images\badge_champion1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\badge_champion2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\blue-essence.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\clash.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\logo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\menu-selection.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Pieces\blue-essence.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Pieces\rp.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Pieces\star-piece.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Positions\bottom.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Positions\jungle.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Positions\mid.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Positions\support.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Positions\top.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\profile-default.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\rp.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\skin_chroma.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\skin_epic.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\skin_legend.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\skin_limit.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\skin_myth.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\skin_transcend.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\spell_barrier.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\spell_clarity.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\spell_cleanse.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\spell_exhaust.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\spell_flash.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\spell_ghost.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\spell_heal.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\spell_ignite.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\spell_mark.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\spell_smite.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\spell_teleport.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_akshan.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_amumu.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_anivia.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_annie.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_aphelios.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_ari.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_ashe.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_aurelionsol.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_azir.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_bard.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_blitzcrank.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_brand.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_chogath.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_corki.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_drmundo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_evelynn.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_ezreal.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_fiddlesticks.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_fiora.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_galio.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_gangplank.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_garen.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_gnar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_gwen.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_heimerdinger.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_irelia.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_jarvaniv.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_jhin.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_Jinx.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_kaisa.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_karma.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_kassadin.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_katarina.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_kayle.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_leblanc.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_leona.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_lillia.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_lucian.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_lulu.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_lux.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_malphite.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_malzahar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_maokai.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_masteryi.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_missfortune.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_nami.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_nasus.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_neeko.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_nidalee.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_nunu.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_olaf.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_poppy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_pyke.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_quinn.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_rammus.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_rell.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_renekton.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_rengar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_rumble.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_ryze.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_samira.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_sejuani.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_senna.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_seraphine.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_shyvana.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_sion.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_sivir.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_skarner.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_soraka.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_syndra.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_talon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_taric.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_teemo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_thresh.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_tryndamere.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_twistedfate.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_twitch.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_varus.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_vayne.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_veigar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_velkoz.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_vi.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_viego.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_vladimir.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_volibear.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_wukong.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_xerath.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_xinzhao.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_yasuo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_yone.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_yuumi.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_zed.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_ziggs.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_zilean.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_zoe.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Stores\champ_zyra.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\TeamFights\lol-curtaincall.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\TeamFights\lol-curtaincall2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\TeamFights\lol-emoji-beg.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\TeamFights\lol-emoji-random.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\TeamFights\lol-goblin.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\TeamFights\lol-kanmei.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\TeamFights\lol-legend-egg.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\TeamFights\lol-luckypig.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\TeamFights\lol-small-egg.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\TeamFights\lol-star-item.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\thumb-1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\thumb-10.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\thumb-11.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\thumb-12.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\thumb-2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\thumb-3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\thumb-4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\thumb-5.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\thumb-6.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\thumb-7.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\thumb-8.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\thumb-9.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Thumbnails\0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Thumbnails\1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Thumbnails\10.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Thumbnails\11.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Thumbnails\13.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Thumbnails\14.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Thumbnails\15.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Thumbnails\16.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Thumbnails\17.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Thumbnails\18.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Thumbnails\21.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Thumbnails\22.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Thumbnails\23.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Thumbnails\24.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Thumbnails\25.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Thumbnails\27.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Thumbnails\32.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Thumbnails\33.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Thumbnails\35.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Thumbnails\37.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Thumbnails\39.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Thumbnails\4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Thumbnails\42.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Thumbnails\5.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Thumbnails\6.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Thumbnails\7.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Thumbnails\8.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Thumbnails\9.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Thumbnails\Barus.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Thumbnails\gangplank.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Thumbnails\Gragas.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Thumbnails\LeBlanc.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Thumbnails\Leesin.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Thumbnails\Lissandra.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Thumbnails\Lux.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Thumbnails\malphite.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Thumbnails\Maokai.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Thumbnails\Morgana.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Thumbnails\Neeko.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Thumbnails\Oriana.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Thumbnails\riven.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Thumbnails\Rucian.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\Thumbnails\rumble.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\wallpaper-caitlyn.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\wallpaper-ezreal.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\wallpaper-fiora-gaussian.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\wallpaper-fiora.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\wallpaper-gnar.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\wallpaper-jinx.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\wallpaper-kindred.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\wallpaper-leesin.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\wallpaper-leona.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\wallpaper-lux-gaussian.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\wallpaper-lux.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\wallpaper-maokai.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\wallpaper-rucian.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\wallpaper-sena.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\wallpaper-singed.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\wallpaper-tft.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\wallpaper-thumb-1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\wallpaper-thumb-2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Images\worlds_2022.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+</Project>
