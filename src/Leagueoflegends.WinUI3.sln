@@ -13,25 +13,33 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Leagueoflegends.Main", "Lea
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Leagueoflegends.Support", "Leagueoflegends.Support\Leagueoflegends.Support.csproj", "{E2772AB7-51AC-45B2-AE3C-3D2EBB88492F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leagueoflegends.Navigate", "Leagueoflegends.Navigate\Leagueoflegends.Navigate.csproj", "{C0B2CE3A-0749-48DA-ACA4-B6CAA9C963F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Leagueoflegends.Navigate", "Leagueoflegends.Navigate\Leagueoflegends.Navigate.csproj", "{C0B2CE3A-0749-48DA-ACA4-B6CAA9C963F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leagueoflegends.Social", "Leagueoflegends.Social\Leagueoflegends.Social.csproj", "{BD942BF2-8C13-415F-99AB-3A7C8A720984}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Leagueoflegends.Social", "Leagueoflegends.Social\Leagueoflegends.Social.csproj", "{BD942BF2-8C13-415F-99AB-3A7C8A720984}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leagueoflegends.Home", "Leagueoflegends.Home\Leagueoflegends.Home.csproj", "{D98BECB6-2959-425C-9093-CFD694287D2F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Leagueoflegends.Home", "Leagueoflegends.Home\Leagueoflegends.Home.csproj", "{D98BECB6-2959-425C-9093-CFD694287D2F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leagueoflegends.Collection", "Leagueoflegends.Collection\Leagueoflegends.Collection.csproj", "{7A078B08-D429-43CE-82C3-92ED937FB9DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Leagueoflegends.Collection", "Leagueoflegends.Collection\Leagueoflegends.Collection.csproj", "{7A078B08-D429-43CE-82C3-92ED937FB9DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leagueoflegends.Clash", "Leagueoflegends.Clash\Leagueoflegends.Clash.csproj", "{2CA6A33D-6590-4039-910F-CF885D9E0DA1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Leagueoflegends.Clash", "Leagueoflegends.Clash\Leagueoflegends.Clash.csproj", "{2CA6A33D-6590-4039-910F-CF885D9E0DA1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leagueoflegends.Profile", "Leagueoflegends.Profile\Leagueoflegends.Profile.csproj", "{88F47622-9193-44E3-BFF4-BC36B7606485}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Leagueoflegends.Profile", "Leagueoflegends.Profile\Leagueoflegends.Profile.csproj", "{88F47622-9193-44E3-BFF4-BC36B7606485}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leagueoflegends.Shop", "Leagueoflegends.Shop\Leagueoflegends.Shop.csproj", "{CFF37A6B-2B0C-43D4-8098-A5E98EA1A330}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Leagueoflegends.Shop", "Leagueoflegends.Shop\Leagueoflegends.Shop.csproj", "{CFF37A6B-2B0C-43D4-8098-A5E98EA1A330}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leagueoflegends.Store", "Leagueoflegends.Store\Leagueoflegends.Store.csproj", "{1299D853-8DA4-431C-B194-34E44363FAF4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Leagueoflegends.Store", "Leagueoflegends.Store\Leagueoflegends.Store.csproj", "{1299D853-8DA4-431C-B194-34E44363FAF4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leagueoflegends.Tft", "Leagueoflegends.Tft\Leagueoflegends.Tft.csproj", "{3A1CEA4B-DBA9-4188-8B43-84D626FE5F49}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Leagueoflegends.Tft", "Leagueoflegends.Tft\Leagueoflegends.Tft.csproj", "{3A1CEA4B-DBA9-4188-8B43-84D626FE5F49}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leagueoflegends.Settings", "Leagueoflegends.Settings\Leagueoflegends.Settings.csproj", "{DD4C7FD3-D576-45D2-94A8-6988FA66C607}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Leagueoflegends.Settings", "Leagueoflegends.Settings\Leagueoflegends.Settings.csproj", "{DD4C7FD3-D576-45D2-94A8-6988FA66C607}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "App (WinUI3)", "App (WinUI3)", "{624700EA-94CE-4783-9D7A-864A6C9E7FCB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Based", "Based", "{BF65155D-09F3-411B-ACBE-12D5D5A4C926}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundation", "Foundation", "{7F754BDB-3CB1-413D-8942-51A3C10CE64D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Partial", "Partial", "{21F3F9AA-0CA6-428A-883C-47AEEABA91B8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -296,6 +304,23 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E2C762EC-6430-45BE-8274-0B72EF545857} = {624700EA-94CE-4783-9D7A-864A6C9E7FCB}
+		{8EEF56C6-5B62-4C1E-8B4F-1A773144F101} = {BF65155D-09F3-411B-ACBE-12D5D5A4C926}
+		{BCAB0F11-1D0E-409F-BFF7-5180EECC3EDA} = {BF65155D-09F3-411B-ACBE-12D5D5A4C926}
+		{502F2EBB-F5F2-4E65-9C2E-E213C45F909F} = {21F3F9AA-0CA6-428A-883C-47AEEABA91B8}
+		{E2772AB7-51AC-45B2-AE3C-3D2EBB88492F} = {7F754BDB-3CB1-413D-8942-51A3C10CE64D}
+		{C0B2CE3A-0749-48DA-ACA4-B6CAA9C963F1} = {21F3F9AA-0CA6-428A-883C-47AEEABA91B8}
+		{BD942BF2-8C13-415F-99AB-3A7C8A720984} = {21F3F9AA-0CA6-428A-883C-47AEEABA91B8}
+		{D98BECB6-2959-425C-9093-CFD694287D2F} = {21F3F9AA-0CA6-428A-883C-47AEEABA91B8}
+		{7A078B08-D429-43CE-82C3-92ED937FB9DB} = {21F3F9AA-0CA6-428A-883C-47AEEABA91B8}
+		{2CA6A33D-6590-4039-910F-CF885D9E0DA1} = {21F3F9AA-0CA6-428A-883C-47AEEABA91B8}
+		{88F47622-9193-44E3-BFF4-BC36B7606485} = {21F3F9AA-0CA6-428A-883C-47AEEABA91B8}
+		{CFF37A6B-2B0C-43D4-8098-A5E98EA1A330} = {21F3F9AA-0CA6-428A-883C-47AEEABA91B8}
+		{1299D853-8DA4-431C-B194-34E44363FAF4} = {21F3F9AA-0CA6-428A-883C-47AEEABA91B8}
+		{3A1CEA4B-DBA9-4188-8B43-84D626FE5F49} = {21F3F9AA-0CA6-428A-883C-47AEEABA91B8}
+		{DD4C7FD3-D576-45D2-94A8-6988FA66C607} = {21F3F9AA-0CA6-428A-883C-47AEEABA91B8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7657BEB8-D088-4AA3-BA18-A87FAB8B9144}
