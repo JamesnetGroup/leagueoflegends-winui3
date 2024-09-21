@@ -1,6 +1,3 @@
-using System;
-using System.Linq;
-
 namespace Jamesnet.Core;
 
 public class DefaultViewModelInitializer : IViewModelInitializer

@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Jamesnet.Core;
+﻿namespace Jamesnet.Core;
 
 public class YamlData : List<YamlItem>
 {

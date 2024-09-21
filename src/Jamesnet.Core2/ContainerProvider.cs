@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Jamesnet.Core;
+﻿namespace Jamesnet.Core;
 
 public static class ContainerProvider
 {

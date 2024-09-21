@@ -1,5 +1,3 @@
-using System;
-
 namespace Jamesnet.Core;
 
 public interface IContainer

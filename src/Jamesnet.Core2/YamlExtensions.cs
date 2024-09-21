@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace Jamesnet.Core;
+﻿namespace Jamesnet.Core;
 
 public static class YamlExtensions
 {
