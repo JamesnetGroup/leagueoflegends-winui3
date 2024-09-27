@@ -5,7 +5,7 @@
 This is a high-quality recreation project of the League of Legends client using WinUI 3. The project showcases various implementation techniques of WinUI 3 and demonstrates a wide range of technical approaches to distributed design for large-scale projects.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![.NET](https://img.shields.io/badge/.NET-6.0-blue.svg)](https://dotnet.microsoft.com/download)
+[![.NET](https://img.shields.io/badge/.NET-8.0-blue.svg)](https://dotnet.microsoft.com/download)
 [![Stars](https://img.shields.io/github/stars/jamesnetgroup/leagueoflegends-winui3.svg)](https://github.com/jamesnetgroup/leagueoflegends-winui3/stargazers)
 [![Forks](https://img.shields.io/github/forks/jamesnetgroup/leagueoflegends-winui3.svg)](https://github.com/jamesnetgroup/leagueoflegends-winui3/network/members)
 [![Issues](https://img.shields.io/github/issues/jamesnetgroup/leagueoflegends-winui3.svg)](https://github.com/jamesnetgroup/leagueoflegends-winui3/issues)
