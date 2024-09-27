@@ -45,7 +45,7 @@ Note: This application is specifically developed for the Windows environment usi
 
 ## How to Run
 
-When you clone this repository, it's set up for the .NET 6.0 environment by default. You can build and run it immediately using Visual Studio 2022 on Windows.
+When you clone this repository, it's set up for the .NET 8.0 environment by default. You can build and run it immediately using Visual Studio 2022 on Windows.
 
 ### Configuration:
 
@@ -69,18 +69,3 @@ Your contributions are welcome! Feel free to submit Pull Requests.
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Development Roadmap
-Here are the items that need development in the future. Anyone can participate in these tasks and become a contributor. We look forward to your opinions and participation!
-
-- [ ] Implement GradientBrush for Foreground
-- [ ] Customize TextBox CaretBrush color
-- [ ] Improve TextBox CustomControl
-- [ ] Enhance ScrollViewer CustomControl
-- [ ] Resolve view coordinate update issue when changing main window position
-- [ ] Improve DependencyProperty Callback handling timing
-- [ ] Add multi-language support
-- [ ] Implement multi-theme support
-- [ ] Optimize performance for large-scale data handling
-- [ ] Implement advanced animations using Composition API
-- [ ] Integrate with Windows App SDK features
